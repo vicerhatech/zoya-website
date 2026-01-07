@@ -1,4 +1,4 @@
-import Why from "../assets/images/why-zoya.png"
+import WhyZoya from "../assets/images/why-zoya.png"
 
 
 
@@ -27,7 +27,7 @@ const Home = () => {
         </div>
             
             <div>
-               <img src={Why} alt="Company logo" className="why-image rounded-xl" />
+               <img src={WhyZoya} alt="Intro Text" className="why-image rounded-xl" />
             </div>
 
 
