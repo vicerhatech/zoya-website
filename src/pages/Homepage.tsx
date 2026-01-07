@@ -27,7 +27,7 @@ const Home = () => {
         </div>
             
             <div>
-               <img src="/images/why-zoya.png" alt="Intro Text" className="why-image rounded-xl" />
+               <img src="/images/why-zoya.PNG" alt="Intro Text" className="why-image rounded-xl" />
             </div>
 
 
