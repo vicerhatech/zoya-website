@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../../assets/images/purple-logo.png"
+import logo2 from "../../assets/images/white-log.png"
 import Search from "../common/search";
 
 const Navbar = () => {
@@ -14,21 +15,22 @@ const Navbar = () => {
           bg-white/60 backdrop-blur-xl
           border border-white/20
           shadow-lg shadow-black/5
-          dark:bg-black/40 dark:border-white/10
+          dark:bg-purple-800 dark:border-white/10
         "
       >
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="">
-           <a href="#"><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer" /></a> 
+           <a href="#"><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></a>
+           <a href="#"><img src={logo2} alt="Company logo" className="h-5 px-2 cursor-pointer dark:border-white hidden dark:flex" /></a>
           </div>
-          <a href="#"><span className="text-lg font-extrabold text-purple-800 dark:text-purple-300 cursor-pointer">
+          <a href="#"><span className="text-lg font-extrabold text-purple-800 dark:text-white cursor-pointer">
             Zoya
           </span></a>
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex items-center gap-20 text-md font-bold text-purple-800 dark:text-gray-200">
+        <ul className="hidden lg:flex items-center gap-20 text-md font-bold text-purple-800 dark:text-white">
           <li className="hover:text-purple-900 transition cursor-pointer">Home</li>
           <li className="hover:text-purple-900 transition cursor-pointer">Problem</li>
           <li className="hover:text-purple-900 transition cursor-pointer">Solution</li>
@@ -40,11 +42,11 @@ const Navbar = () => {
 
           <Search />
 
-          <button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition cursor-pointer">
+          <button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-purple-900">
             Log In
           </button>
     
-          <button className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer">
+          <button className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:border-white">
             Get Started  ➔
           </button>
 

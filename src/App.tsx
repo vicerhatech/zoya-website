@@ -1,14 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/navbar';
 import Home from './pages/Homepage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-purple-100 via-white to-green-100">
+     <Router>
+    <div className="min-h-screen flex flex-col bg-linear-to-br from-purple-100 via-white to-green-100 ">
       <Navbar />
-      <main className="pt-32 px-6">
-        <Home />
+      <main className="flex-1">
+         <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
       </main>
     </div>
+    </Router>
   );
 }
 export default App

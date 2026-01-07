@@ -17,9 +17,9 @@ const SearchInput = () => {
           border border-purple-800 dark:border-white/10
           bg-transparent dark:bg-black/30
           px-4 pr-8 py-2 text-sm font-bold
-          text-purple-900 dark:text-gray-200
+          text-purple-900 dark:text-white
           outline-purple-800
-          backdrop-blur-md
+          backdrop-blur-md dark:placeholder:text-white
         "
       />
 
@@ -32,11 +32,11 @@ const SearchInput = () => {
           rounded-full
           bg-purple-800 text-white
           hover:bg-purple-900
-          dark:bg-white/10 dark:hover:bg-white/20
+          dark:bg-white dark:hover:bg-purple-800
           transition
         "
       >
-        <Search className="h-4 w-4" />
+        <Search className="h-4 w-4 text-white dark:text-purple-900 dark:hover:text-white" />
       </button>
     </form>
   );

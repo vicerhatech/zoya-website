@@ -5,7 +5,8 @@
 const Home = () => {
     return (
         <>
-    <div className="flex justify-around ">
+
+    <div className="flex flex-col sm:flex-row justify-around  pt-32 px-6 dark:bg-black">
         <div className=" py-20 ">
 
             <div className="intro">
@@ -15,8 +16,8 @@ const Home = () => {
                
 
             <div className="intro-text py-6">
-                    <p className="text-2xl text-gray-700">From trucks of sand to bags of grain — compare suppliers, </p>
-                    <p className="text-2xl text-gray-700">get real prices, and order in bulk. All on Zoya.</p>
+                    <p className="text-2xl text-gray-700 dark:text-white">From trucks of sand to bags of grain — compare suppliers, </p>
+                    <p className="text-2xl dark:text-white">get real prices, and order in bulk. All on Zoya.</p>
             </div>
 
             <div>
