@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  --color-purple-600:  #faf5ff;
   --color-purple-800:  #5d3fd2;
-  --color-purple-900: #21096FFF;
+  --color-purple-900:  #21096FFF;
+
+  
   /* #7e22ce */
 }
 
@@ -11,4 +14,9 @@
   width: 500px;
   height: 450px;
   /* padding-right: 50px */
+}
+
+.hidden-cost{
+  width: 1500px;
+  height: 230px
 }
