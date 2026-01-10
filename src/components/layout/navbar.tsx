@@ -20,21 +20,21 @@ const Navbar = () => {
       >
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <div className="">
-           <a href="#"><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></a>
-           <a href="#"><img src={logo2} alt="Company logo" className="h-5 px-2 cursor-pointer dark:border-white hidden dark:flex" /></a>
+          <div className="flex">
+           <a href="/"><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></a>
+           <a href="/" className="dark:bg-black rounded-full py-2"><img src={logo2} alt="Company logo" className="h-5 px-2 cursor-pointer dark:border-white hidden dark:flex" /></a>
           </div>
-          <a href="#"><span className="text-lg font-extrabold text-purple-800 dark:text-white cursor-pointer">
+          <a href="/"><span className="text-lg font-extrabold text-purple-800 dark:text-white cursor-pointer">
             Zoya
           </span></a>
         </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex items-center gap-20 text-md font-bold text-purple-800 dark:text-white">
-          <li className="hover:text-purple-900 transition cursor-pointer">Home</li>
-          <li className="hover:text-purple-900 transition cursor-pointer">Problem</li>
-          <li className="hover:text-purple-900 transition cursor-pointer">Solution</li>
-          <li className="hover:text-purple-900 transition cursor-pointer">How It Works</li>
+         <a href="/"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Home</li></a> 
+         <a href=""><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Problem</li></a>
+         <a href=""><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Solution</li></a>  
+         <a href=""><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">How It Works</li></a> 
         </ul>
 
         {/* Desktop Actions */}
@@ -42,11 +42,11 @@ const Navbar = () => {
 
           <Search />
 
-          <button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-purple-900">
+          <button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-black">
             Log In
           </button>
     
-          <button className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:border-white">
+          <button className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">
             Get Started  ➔
           </button>
 

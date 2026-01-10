@@ -2,9 +2,15 @@
 
 @theme {
   --color-purple-600:  #faf5ff;
+  --color-purple-700:  #7f70e0;
   --color-purple-800:  #5d3fd2;
   --color-purple-900:  #21096FFF;
+  --color-orange-600:  #ff7b00;
+  --color-green-600:   #28700d;
+  --color-gray-900: #d3cff2;
 
+
+  
   
   /* #7e22ce */
 }
@@ -18,5 +24,10 @@
 
 .hidden-cost{
   width: 1500px;
-  height: 230px
+  height: 230px;
+}
+
+.procurement{
+  width: 600px;
+  height: 200px;
 }
