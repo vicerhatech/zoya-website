@@ -1,5 +1,3 @@
-// import WhyZoya from "../assets/images/why-zoya.png"
-import HiddenCost from "../assets/images/hidden-cost.png";
 import Procurement from "../assets/images/procurement-picture.jpeg";
 import { CheckSquare } from "lucide-react";
 import HIW from "../assets/images/how-it-works.png";
@@ -47,7 +45,7 @@ const Home = () => {
             <div className="dark:bg-black">
                 <div className="flex flex-col-reverse sm:flex-row pt-15 sm:pt-32 px-5 sm:px-20 ">
                     <div className=" py-10 sm:py-0">
-                        <img src={HiddenCost} alt="Hidden Cost" className="hidden-cost rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
+                        <img src="/images/hidden-cost.PNG" alt="Hidden Cost" className="hidden-cost rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
                     </div>
 
                     <div className="my-auto text-justify sm:text-justify">
