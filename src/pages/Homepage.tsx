@@ -1,4 +1,3 @@
-import Procurement from "../assets/images/procurement-picture.jpeg";
 import { CheckSquare } from "lucide-react";
 import HIW from "../assets/images/how-it-works.png";
 import Testimonials from "../components/other/testimonial"
@@ -67,7 +66,7 @@ const Home = () => {
                     </div>
 
                     <div className="py-10">
-                        <img src={Procurement} alt="Procurement Info" className="procurement rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
+                        <img src="/images/procurement-picture.JPEG" alt="Procurement Info" className="procurement rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
                     </div>
 
 
@@ -75,7 +74,7 @@ const Home = () => {
 
                 {/* <div className="flex flex-col-reverse px-5 sm:flex-row justify-around py-25">
                     <div className="py-2">
-                        <img src={HIW} alt="How It Works" />
+                        <img src="/images/procurement-picture.JPEG" alt="How It Works" />
                     </div>
 
                     <div className="my-auto pb-6 sm:pb-0">
@@ -116,7 +115,7 @@ const Home = () => {
                     </div>
 
                     <div className="flex justify-center pt-8 pb-4 px-6">
-                        <img src={HIW} alt="How It Works" />
+                        <img src="/images/how-it-works.png" alt="How It Works" />
                     </div>
 
                 </div>
