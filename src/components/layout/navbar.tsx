@@ -32,9 +32,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex items-center gap-20 text-md font-bold text-purple-800 dark:text-white">
          <a href="/"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Home</li></a> 
-         <a href=""><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Problem</li></a>
-         <a href=""><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Solution</li></a>  
-         <a href=""><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">How It Works</li></a> 
+         <a href="#theProblem"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Problem</li></a>
+         <a href="#theSolution"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Solution</li></a>  
+         <a href="#howZoyaWorks"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">How It Works</li></a> 
         </ul>
 
         {/* Desktop Actions */}
@@ -78,10 +78,10 @@ const Navbar = () => {
           >
 
         <ul className="flex flex-col gap-4 text-md font-bold text-purple-800 dark:text-gray-200">
-          <li className="hover:text-purple-900 transition cursor-pointer">Home</li>
-          <li className="hover:text-purple-900 transition cursor-pointer">Problem</li>
-          <li className="hover:text-purple-900 transition cursor-pointer">Solution</li>
-          <li className="hover:text-purple-900 transition cursor-pointer">How It Works</li>
+         <a href="/"><li className="hover:text-purple-900 transition cursor-pointer">Home</li></a> 
+         <a href="#theProblem"><li className="hover:text-purple-900 transition cursor-pointer">Problem</li></a> 
+         <a href="#theSolution"><li className="hover:text-purple-900 transition cursor-pointer">Solution</li></a> 
+         <a href="#howZoyaWorks"><li className="hover:text-purple-900 transition cursor-pointer">How It Works</li></a> 
         </ul>
 
         <div className="py-6"> 

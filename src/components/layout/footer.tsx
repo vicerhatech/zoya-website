@@ -31,10 +31,10 @@ const Footer = () => {
 
                     <div>
                         <p className="font-bold text-white dark:text-black" >Quick Links</p>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Home</p></a>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Problem</p></a>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Solution</p></a>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>How it works</p></a>
+                        <a href="/" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Home</p></a>
+                        <a href="#theProblem" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Problem</p></a>
+                        <a href="#theSolution" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Solution</p></a>
+                        <a href="#howZoyaWorks" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>How it works</p></a>
                     </div>
 
                     <div>
@@ -58,7 +58,7 @@ const Footer = () => {
 
                     <div className="flex gap-10 sm:gap-4 justify-center ">
                         <a
-                            href="https://twitter.com/zoyaprocurement"
+                            href="/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition hover:text-purple-800"
@@ -68,7 +68,7 @@ const Footer = () => {
                         </a>
 
                         <a
-                            href="https://linkedin.com/in/yourprofile"
+                            href="/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition hover:text-purple-800"

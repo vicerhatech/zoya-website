@@ -40,7 +40,7 @@ const Home = () => {
 
             </div>
 
-            <div className="dark:bg-black">
+            <div className="dark:bg-black" id="theProblem">
                 <div className="flex flex-col-reverse sm:flex-row pt-15 sm:pt-32 px-5 sm:px-20 ">
                     <div className=" py-10 sm:py-0">
                         <img src="/images/hidden-cost.PNG" alt="Hidden Cost" className="hidden-cost rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
@@ -52,7 +52,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:mt-25 py-10 sm:py-15 sm:mx-10 px-5 sm:px-12 justify-between bg-purple-600 shadow-2xl dark:bg-purple-800">
+                <div className="flex flex-col sm:flex-row sm:mt-25 py-10 sm:py-15 sm:mx-10 px-5 sm:px-12 justify-between bg-purple-600 shadow-2xl dark:bg-purple-800" id="theSolution">
                     <div>
                         <h2 className="text-purple-800 font-extrabold text-3xl py-3 dark:text-white">The Zoya Solution</h2>
                         <div>
@@ -87,7 +87,7 @@ const Home = () => {
                     </div>
                 </div> */}
 
-                <div className="py-15">
+                <div className="py-15" id="howZoyaWorks">
                     <div className="flex flex-col text-center">
                         <h2 className="text-purple-800 font-extrabold text-4xl py-3">How Zoya works</h2>
                         <p className=" text-gray-700 dark:text-white text-xl">Get started in minutes and experience seamless procurement</p>

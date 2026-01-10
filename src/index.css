@@ -16,6 +16,10 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 .why-image{
   width: 500px;
   height: 450px;
