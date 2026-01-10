@@ -1,5 +1,4 @@
 import { CheckSquare } from "lucide-react";
-import HIW from "../assets/images/how-it-works.png";
 import Testimonials from "../components/other/testimonial"
 import { MapPin } from "lucide-react";
 import { Package } from "lucide-react";
