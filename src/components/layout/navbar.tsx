@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center gap-2">
           <div className="flex">
-           <a href="/"><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></a>
+           <a href="/" className="bg-white rounded-full py-2"><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></a>
            <a href="/" className="dark:bg-black rounded-full py-2"><img src={logo2} alt="Company logo" className="h-5 px-2 cursor-pointer dark:border-white hidden dark:flex" /></a>
           </div>
           <a href="/"><span className="text-lg font-extrabold text-purple-800 dark:text-white cursor-pointer">
@@ -32,9 +32,9 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex items-center gap-20 text-md font-bold text-purple-800 dark:text-white">
          <a href="/"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Home</li></a> 
-         <a href="#theProblem"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Problem</li></a>
-         <a href="#theSolution"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Solution</li></a>  
-         <a href="#howZoyaWorks"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">How It Works</li></a> 
+         <a href="/#theProblem"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Problem</li></a>
+         <a href="/#theSolution"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Solution</li></a>  
+         <a href="/#howZoyaWorks"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">How It Works</li></a> 
         </ul>
 
         {/* Desktop Actions */}
@@ -42,13 +42,10 @@ const Navbar = () => {
 
           <Search />
 
-          <button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-black">
-            Log In
-          </button>
-    
-          <button className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">
-            Get Started  ➔
-          </button>
+           <a href="/login"><button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-black">Log In</button></a> 
+          
+           <a href="/signup"><button className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">Get Started  ➔</button></a> 
+          
 
 
         </div>
@@ -79,9 +76,9 @@ const Navbar = () => {
 
         <ul className="flex flex-col gap-4 text-md font-bold text-purple-800 dark:text-gray-200">
          <a href="/"><li className="hover:text-purple-900 transition cursor-pointer">Home</li></a> 
-         <a href="#theProblem"><li className="hover:text-purple-900 transition cursor-pointer">Problem</li></a> 
-         <a href="#theSolution"><li className="hover:text-purple-900 transition cursor-pointer">Solution</li></a> 
-         <a href="#howZoyaWorks"><li className="hover:text-purple-900 transition cursor-pointer">How It Works</li></a> 
+         <a href="/#theProblem"><li className="hover:text-purple-900 transition cursor-pointer">Problem</li></a> 
+         <a href="/#theSolution"><li className="hover:text-purple-900 transition cursor-pointer">Solution</li></a> 
+         <a href="/#howZoyaWorks"><li className="hover:text-purple-900 transition cursor-pointer">How It Works</li></a> 
         </ul>
 
         <div className="py-6"> 
@@ -90,13 +87,13 @@ const Navbar = () => {
 
           <div className="flex justify-between">
 
-           <button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition">
+            <a href="/login"><button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition">
             Log In
-          </button>
+          </button></a>
     
-          <button className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition">
+          <a href="/signup"><button className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition">
             Get Started  ➔
-          </button>
+          </button></a>
          </div>
 
        

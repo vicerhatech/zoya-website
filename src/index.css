@@ -8,6 +8,7 @@
   --color-orange-600:  #ff7b00;
   --color-green-600:   #28700d;
   --color-gray-900: #d3cff2;
+  --color-blue-600: #1877F2;
 
 
   
@@ -34,4 +35,14 @@ html {
 .procurement{
   width: 600px;
   height: 200px;
+}
+
+.signup-logo{
+  width: 63px;
+  height: 60px
+}
+
+.signup-right-section{
+  border-radius: 50%;
+  padding: 15px;
 }

@@ -71,21 +71,6 @@ const Home = () => {
 
                 </div>
 
-                {/* <div className="flex flex-col-reverse px-5 sm:flex-row justify-around py-25">
-                    <div className="py-2">
-                        <img src="/images/procurement-picture.JPEG" alt="How It Works" />
-                    </div>
-
-                    <div className="my-auto pb-6 sm:pb-0">
-                        <h2 className="text-purple-800 font-extrabold text-3xl pb-3 sm:pb-0 ">How It Works?</h2>
-                        <div className="dark:text-white">
-                            <p className="pt-2 text-lg"><span className="mr-2 text-purple-900 font-bold dark:text-purple-800">1.</span>Search for what you need; sand, steel, granite, rice, wheat, grains, etc.</p>
-                            <p className="pt-2 text-lg"><span className="mr-2 text-purple-900 font-bold dark:text-purple-800">2.</span>Compare suppliers instantly by price, rating, and distance.</p>
-                            <p className="pt-2 text-lg"><span className="mr-2 text-purple-900 font-bold dark:text-purple-800">3.</span>Place your order and choose delivery or pickup.</p>
-                            <p className="pt-2 text-lg"><span className="mr-2 text-purple-900 font-bold dark:text-purple-800">4.</span>Track fulfillment and delivery to your site or warehouse.</p>
-                        </div>
-                    </div>
-                </div> */}
 
                 <div className="py-15" id="howZoyaWorks">
                     <div className="flex flex-col text-center">
