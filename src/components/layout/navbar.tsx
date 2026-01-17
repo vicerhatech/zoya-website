@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/purple-logo.png"
 import logo2 from "../../assets/images/white-log.png"
 import Search from "../common/search";
@@ -42,9 +43,9 @@ const Navbar = () => {
 
           <Search />
 
-           <a href="/login"><button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-black">Log In</button></a> 
+           <Link to="/login" className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-black">Log In</Link> 
           
-           <a href="/signup"><button className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">Get Started  ➔</button></a> 
+           <Link to="/signup" className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">Get Started  ➔</Link>
           
 
 
@@ -87,13 +88,13 @@ const Navbar = () => {
 
           <div className="flex justify-between">
 
-            <a href="/login"><button className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition">
+            <Link to="/login" className="rounded-lg border border-purple-800 px-4 py-2 text-sm font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition">
             Log In
-          </button></a>
+          </Link>
     
-          <a href="/signup"><button className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition">
+          <Link to="/signup" className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition">
             Get Started  ➔
-          </button></a>
+          </Link>
          </div>
 
        
