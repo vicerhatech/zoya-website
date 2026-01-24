@@ -4,6 +4,8 @@ import Home from './pages/Homepage';
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Footer from "./components/layout/footer";
+import Policy from "./pages/privacypolicy";
+import Terms from "./pages/termsofservice";
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/policy" element={<Policy />} />
+            <Route path="/terms" element={<Terms />} />
+
           </Routes>
       </main>
       <Footer />

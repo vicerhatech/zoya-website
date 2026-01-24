@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/purple-logo.png"
 import logo2 from "../../assets/images/white-log.png"
 import { FaFacebookF, FaApple } from "react-icons/fa";
@@ -6,7 +7,7 @@ import GoogleIcon from "../../components/other/google-icon";
 
 
 
-type UserType = "buyer" | "courier"
+type UserType = "buyer" | "supplier"
 
 interface BuyerData {
     firstName: string
@@ -21,7 +22,7 @@ interface BuyerData {
     confirmPassword: string
 }
 
-interface CourierData {
+interface SupplierData {
     firstName: string
     lastName: string
     email: string
@@ -55,7 +56,7 @@ export default function SignupPage() {
 
     })
 
-    const [courierData, setCourierData] = useState<CourierData>({
+    const [supplierData, setSupplierData] = useState<SupplierData>({
         firstName: "",
         lastName: "",
         email: "",
@@ -75,9 +76,9 @@ export default function SignupPage() {
         setBuyerData(prev => ({ ...prev, [name]: value }))
     }
 
-    const handleCourierChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleSupplierChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target
-        setCourierData(prev => ({ ...prev, [name]: value }))
+        setSupplierData(prev => ({ ...prev, [name]: value }))
     }
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -86,7 +87,7 @@ export default function SignupPage() {
         const payload =
             userType === "buyer"
                 ? { userType, ...buyerData }
-                : { userType, ...courierData }
+                : { userType, ...supplierData }
 
         await fetch("/api/signup", {
             method: "POST",
@@ -99,9 +100,9 @@ export default function SignupPage() {
 
         <div className="dark:bg-black pt-28 pb-15">
 
-            <div className=" flex flex-col-reverse sm:flex-row mx-3 sm:mx-40 sm:justify-between sm:rounded-br-none rounded-b-3xl sm:rounded-tl-3xl sm:rounded-bl-3xl">
+            <div className=" flex flex-col-reverse lg:flex-row mx-3 sm:mx-10 lg:mx-40 lg:justify-between lg:rounded-br-none sm:rounded-br-3xl rounded-b-3xl lg:rounded-tl-3xl lg:rounded-bl-3xl">
 
-                <form onSubmit={handleSubmit} className=" px-5 sm:px-10 w-fit h-full shadow-2xl bg-white sm:rounded-br-none rounded-b-3xl sm:rounded-tl-3xl sm:rounded-bl-3xl ">
+                <form onSubmit={handleSubmit} className=" px-5 sm:px-10 w-full h-full shadow-2xl bg-white lg:rounded-br-none rounded-b-3xl sm:rounded-br-3xl lg:rounded-tl-3xl lg:rounded-bl-3xl ">
 
                     <div className="pt-8">
                         <h2 className="font-bold text-3xl text-center">Create Account</h2>
@@ -126,15 +127,15 @@ export default function SignupPage() {
 
                         <button
                             type="button"
-                            onClick={() => setUserType("courier")}
+                            onClick={() => setUserType("supplier")}
                             className={`sm:px-15 px-6 text-xl font-bold rounded-2xl transition
-                            ${userType === "courier"
+                            ${userType === "supplier"
                                     ? "bg-purple-800 text-white"
                                     : "bg-white text-purple-800 border-3 border-purple-800"
                                 }
     `}
                         >
-                            Courier
+                            Supplier
                         </button>
                     </div>
 
@@ -145,16 +146,16 @@ export default function SignupPage() {
                         <div className="flex flex-col">
                             <label htmlFor="firstname" className="font-bold text-xl sm:text-lg text-purple-900">First Name <span className="text-red-600">*</span></label>
                             <input type="text" name="firstName" placeholder="First Name" className="border w-full sm:w-60 border-black outline-purple-800 sm:text-md text-lg rounded-xl my-1 px-2 h-10 font-bold" required
-                                value={userType === "buyer" ? buyerData.firstName : courierData.firstName}
-                                onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                                value={userType === "buyer" ? buyerData.firstName : supplierData.firstName}
+                                onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
                         </div>
 
                         <div className="flex flex-col">
                             <label htmlFor="lastname" className="font-bold text-xl sm:text-lg text-purple-900">Last Name <span className="text-red-600">*</span></label>
                             <input type="text" name="lastName" placeholder="Last Name" className="border w-full sm:w-60 border-black outline-purple-800 sm:text-md text-lg rounded-xl mt-1 px-2 h-10 font-bold" required
-                                value={userType === "buyer" ? buyerData.lastName : courierData.lastName}
-                                onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                                value={userType === "buyer" ? buyerData.lastName : supplierData.lastName}
+                                onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
                         </div>
 
@@ -165,16 +166,16 @@ export default function SignupPage() {
                         <div className="flex flex-col">
                             <label htmlFor="email" className="font-bold text-xl sm:text-lg text-purple-900">Email <span className="text-red-600">*</span></label>
                             <input type="email" name="email" placeholder="Email" className="border w-full sm:w-60 border-black outline-purple-800 rounded-xl sm:text-md text-lg mt-1 px-2 h-10 font-bold" required
-                                value={userType === "buyer" ? buyerData.email : courierData.email}
-                                onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                                value={userType === "buyer" ? buyerData.email : supplierData.email}
+                                onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
                         </div>
 
                         <div className="flex flex-col">
                             <label htmlFor="phone" className="font-bold text-xl sm:text-lg text-purple-900">Phone Number <span className="text-red-600">*</span></label>
                             <input type="tel" name="phone" placeholder="Phone Number" className="border w-full sm:w-60 border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
-                                value={userType === "buyer" ? buyerData.phone : courierData.phone}
-                                onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                                value={userType === "buyer" ? buyerData.phone : supplierData.phone}
+                                onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
                         </div>
 
@@ -183,8 +184,8 @@ export default function SignupPage() {
                     <div className="flex flex-col">
                         <label htmlFor="streetaddress" className="font-bold text-xl sm:text-lg text-purple-900">Street Address <span className="text-red-600">*</span></label>
                         <input type="text" name="streetAddress" placeholder="Street Address" className="border  w-full border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
-                            value={userType === "buyer" ? buyerData.streetAddress : courierData.streetAddress}
-                            onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                            value={userType === "buyer" ? buyerData.streetAddress : supplierData.streetAddress}
+                            onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                         />
                     </div>
 
@@ -192,16 +193,16 @@ export default function SignupPage() {
                         <div className="flex flex-col">
                             <label htmlFor="state" className="font-bold text-xl sm:text-lg text-purple-900">State <span className="text-red-600">*</span></label>
                             <input type="text" name="state" placeholder="State" className="border w-full sm:w-60  border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
-                                value={userType === "buyer" ? buyerData.state : courierData.state}
-                                onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                                value={userType === "buyer" ? buyerData.state : supplierData.state}
+                                onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
                         </div>
 
                         <div className="flex flex-col">
                             <label htmlFor="country" className="font-bold text-xl sm:text-lg text-purple-900">Country <span className="text-red-600">*</span></label>
                             <input type="text" name="country" placeholder="Country" className="border w-full sm:w-60  border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
-                                value={userType === "buyer" ? buyerData.country : courierData.country}
-                                onChange={userType === "buyer" ? handleBuyerChange : handleCourierChange}
+                                value={userType === "buyer" ? buyerData.country : supplierData.country}
+                                onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
                         </div>
 
@@ -242,12 +243,12 @@ export default function SignupPage() {
                     )}
 
                     {/* Courier-only */}
-                    {userType === "courier" && (
+                    {userType === "supplier" && (
                         <>
                             <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
                                 <div className="flex flex-col">
                                     <label htmlFor="vehicletype" className="font-bold text-xl sm:text-lg  text-purple-900">Vehicle Type <span className="text-red-600">*</span></label>
-                                    <select name="vehicleType" onChange={handleCourierChange} className="border rounded-xl px-2 h-10 font-bold border-black outline-purple-800 my-1 sm:text-md text-lg" required>
+                                    <select name="vehicleType" onChange={handleSupplierChange} className="border rounded-xl px-2 h-10 font-bold border-black outline-purple-800 my-1 sm:text-md text-lg" required>
                                         <option value="" disabled selected hidden>Choose Type</option>
                                         <option value="bike" className="text-sm sm:text-lg">Bike</option>
                                         <option value="car" className="text-sm sm:text-lg">Car</option>
@@ -261,15 +262,15 @@ export default function SignupPage() {
                                 <div className="flex flex-col">
                                     <label htmlFor="licensenumber" className="font-bold text-xl sm:text-lg text-purple-900">License Number <span className="text-red-600">*</span></label>
                                     <input type="text" name="licenseNumber" placeholder="License Number" className="border w-full sm:w-40 border-black outline-purple-800 rounded-xl sm:text-md text-lg px-2 h-10 my-1 font-bold" required
-                                        value={courierData.licenseNumber}
-                                        onChange={handleCourierChange}
+                                        value={supplierData.licenseNumber}
+                                        onChange={handleSupplierChange}
                                     />
                                 </div>
 
                                 <div className="flex flex-col">
                                     <label htmlFor="availability" className="font-bold text-xl sm:text-lg text-purple-900">Availability <span className="text-red-600">*</span></label>
 
-                                    <select name="availability" onChange={handleCourierChange} className="border rounded-xl px-2 h-10 mt-1 font-bold border-black outline-purple-800 sm:text-md text-lg" required>
+                                    <select name="availability" onChange={handleSupplierChange} className="border rounded-xl px-2 h-10 mt-1 font-bold border-black outline-purple-800 sm:text-md text-lg" required>
                                         <option value="" disabled selected>Choose Availability</option>
                                         <option value="full-time" className="text-sm sm:text-lg">Full Time</option>
                                         <option value="part-time" className="text-sm sm:text-lg">Part Time</option>
@@ -286,7 +287,7 @@ export default function SignupPage() {
                                     <label htmlFor="password" className="font-bold text-xl sm:text-lg  text-purple-900">Password <span className="text-red-600">*</span></label>
                                     <input type="password" name="password" placeholder="Password" className="border   w-full sm:w-60 border-black outline-purple-800 rounded-xl  mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
                                         value={buyerData.password}
-                                        onChange={handleCourierChange}
+                                        onChange={handleSupplierChange}
                                     />
                                 </div>
 
@@ -294,7 +295,7 @@ export default function SignupPage() {
                                     <label htmlFor="confirmpassword" className="font-bold text-xl sm:text-lg text-purple-900">Confirm Password <span className="text-red-600">*</span></label>
                                     <input type="password" name="confirmPassword" placeholder="Confirm Password" className="border  w-full sm:w-60  border-black outline-purple-800 rounded-xl  mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
                                         value={buyerData.confirmPassword}
-                                        onChange={handleCourierChange}
+                                        onChange={handleSupplierChange}
                                     />
                                 </div>
                             </div>
@@ -305,7 +306,7 @@ export default function SignupPage() {
 
                     <div className="pt-2">
                         <div className="flex gap-2">
-                            <input type="checkbox" name="remember" id="remember" className="sm:w-5 sm:h-5 w-8 h-8" required /> <p className="text-lg">I agree to the <a href="" className="text-orange-600">Terms and Conditions</a>  and <a href="" className="text-orange-600">Privacy Policy</a></p>
+                            <input type="checkbox" name="remember" id="remember" className="sm:w-5 sm:h-5 w-8 h-8" required /> <p className="text-lg">I agree to the <Link to="/terms" className="text-orange-600">Terms and Conditions</Link>  and <Link to="/policy" className="text-orange-600">Privacy Policy</Link></p>
                         </div>
                     </div>
 
@@ -316,7 +317,7 @@ export default function SignupPage() {
 
                 </form>
 
-                <div className="pt-15 pb-8 sm:py-30 bg-purple-800 px-4 sm:px-16 sm:inline sm:w-full sm:rounded-r-3xl sm:rounded-tl-none rounded-t-3xl">
+                <div className="pt-15 pb-8 lg:py-30 bg-purple-800 px-4 lg:px-16 lg:inline lg:w-full lg:rounded-r-3xl lg:rounded-tl-none rounded-t-3xl">
                     <div className="flex flex-col">
                         <div className="flex justify-center">
                             <a href="/" className="signup-right-section bg-white py-2 dark:hidden"><img src={logo} alt="Company logo" className="signup-logo h-5 px-2 cursor-pointer dark:hidden flex" /></a>
@@ -336,7 +337,7 @@ export default function SignupPage() {
                             <span className="my-auto"><hr className="w-25 mx-2" /></span> <p className="font-bold text-white">OR</p> <span className="my-auto"><hr className="w-28 mx-2" /></span>
                         </div>
 
-                        <div className="flex flex-col justify-center mt-2 mx-10 sm:mx-0">
+                        <div className="flex flex-col justify-center mt-2 mx-10 sm:mx-55  lg:mx-0">
                             <button type="submit" className="flex gap-3 px-5 py-2 rounded-lg bg-white mt-1 sm:mt-3 mb-2 hover:bg-black hover:text-white font-bold cursor-pointer"><span><GoogleIcon className="w-5 h-5" />
                             </span>Continue with Google</button>
 

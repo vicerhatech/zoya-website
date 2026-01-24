@@ -16,7 +16,7 @@ const Home = () => {
                 <div className=" py-20 ">
 
                     <div className="intro">
-                        <p className="text-purple-800 font-extrabold text-5xl w-fit ">Zoya Procurement, </p>
+                        <p className="text-purple-800 font-extrabold text-5xl w-fit ">Zoya, Procurement </p>
                         <p className="text-purple-800 font-extrabold text-5xl w-fit ">Made Simple</p>
                     </div>
 
@@ -78,7 +78,7 @@ const Home = () => {
                         <p className=" text-gray-700 dark:text-white text-xl">Get started in minutes and experience seamless procurement</p>
                     </div>
 
-                    <div className="flex justify-center text-center gap-15 pt-10 flex-col sm:flex-row">
+                    <div className="flex justify-center text-center gap-15 pt-10 flex-col lg:flex-row">
                         <div>
                             <div className="rounded-full bg-purple-800 w-20 h-20 mx-auto text-center py-5 text-3xl font-bold text-white"><p>1</p></div>
                             <h2 className="font-bold text-2xl py-1 dark:text-white">Create Account</h2>
@@ -121,7 +121,7 @@ const Home = () => {
                     </div>
 
                     <div>
-                        <div className="flex flex-col sm:flex-row gap-10 sm:gap-40  justify-center pt-6 pb-4 dark:text-white">
+                        <div className="flex flex-col sm:flex-row gap-10 lg:gap-40  justify-center pt-6 pb-4 dark:text-white">
                             <div className="border-3 border-gray-400/50 w-80 pt-10 sm:mx-0 mx-auto pb-8 px-5 rounded-3xl transform transition-transform duration-300 ease-out hover:scale-105">
                                 <div className="w-13 h-13 rounded-xl bg-purple-800 py-3"><MapPin className="w-7 h-7 text-white mx-auto" /></div>
                                 <h3 className="font-bold text-black text-2xl py-7 dark:text-white">Real-Time Tracking</h3>
@@ -138,7 +138,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-10 sm:gap-40  justify-center pt-6 pb-4 dark:text-white">
+                        <div className="flex flex-col sm:flex-row gap-10 lg:gap-40  justify-center pt-6 pb-4 dark:text-white">
                             <div className="border-3 border-gray-400/50 sm:mx-0 mx-auto  w-80 pt-10 pb-8 px-5 rounded-3xl transform transition-transform duration-300 ease-out hover:scale-105">
                                 <div className="w-13 h-13 rounded-xl bg-green-600 py-3"><Truck className="w-7 h-7 text-white mx-auto" /></div>
                                 <h3 className="font-bold text-black text-2xl py-7 dark:text-white">Fast Delivery</h3>
@@ -155,7 +155,7 @@ const Home = () => {
                         </div>
 
 
-                        <div className="flex flex-col sm:flex-row gap-10 sm:gap-40  justify-center pt-6 pb-4 dark:text-white">
+                        <div className="flex flex-col sm:flex-row gap-10 lg:gap-40  justify-center pt-6 pb-4 dark:text-white">
                             <div className="border-3 border-gray-400/50 sm:mx-0 mx-auto  w-80 pt-10 pb-8 px-5 rounded-3xl transform transition-transform duration-300 ease-out hover:scale-105">
                                 <div className="w-13 h-13 rounded-xl bg-orange-600 py-3">
                                     <LineChart className="w-7 h-7 text-white mx-auto" />
@@ -176,7 +176,7 @@ const Home = () => {
                 </div>
 
                 <div className="flex mt-10 sm:mt-25 py-10 sm:py-15 sm:mx-10 px-3 sm:px-12 justify-between shadow-2xl bg-purple-800/30">
-                    <div className="bg-purple-800/70 backdrop-blur-xl w-full h-full py-15 px-5 sm:px-20 mx-0 sm:mx-65 rounded-3xl flex flex-col ">
+                    <div className="bg-purple-800/70 backdrop-blur-xl w-full h-full py-15 px-5 sm:px-20 mx-0 lg:mx-65 rounded-3xl flex flex-col ">
                         <div className="mx-auto">
                             <h2 className="text-white text-3xl font-bold">Ready to transform</h2>
                             <h2 className="text-white text-3xl font-bold">your procurement?</h2>

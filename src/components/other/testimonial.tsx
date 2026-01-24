@@ -1,6 +1,11 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import Profile from "../../assets/images/profile.jpeg";
+// import Profile from "../../assets/images/profile.jpeg";
+import Adekunle from "../../assets/images/adekunle-ogunleye.png";
+import Chiamaka from "../../assets/images/chiamaka-nwoye.jpg";
+import Ibrahim from "../../assets/images/ibrahim-sadiq.jpg";
+import Blessing from "../../assets/images/blessing-okafor.jpg";
+import Sola from "../../assets/images/sola-adebayo.jpg";
 import { Star } from "lucide-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -24,21 +29,38 @@ function StarRating({ rating = 5 }: { rating?: number }) {
 
 const testimonials = [
     {
-        name: "John Doe",
-        role: "CEO, Company",
-        message: "This product changed our workflow completely.",
+        name: "Adekunle Ogunleye",
+        role: "Civil Engineer",
+        image: <img src={Adekunle} alt="PROFILE IMAGE" className="rounded-full"  />,
+        message: "Zoya makes it easier to check material prices and plan projects without unnecessary cost surprises.",
         rating: 5
     },
     {
-        name: "Jane Smith",
-        role: "Designer",
-        message: "Clean UI, smooth experience, highly recommended.",
-        rating: 4
+        name: "Chiamaka Nwoye",
+        role: "First-Time Home Builder",
+        image: <img src={Chiamaka} alt="PROFILE IMAGE" className="rounded-full"  />,
+        message: "Zoya helped me understand real building costs and avoid being overcharged by middlemen.",
+        rating: 5
     },
     {
-        name: "Michael Lee",
-        role: "Developer",
-        message: "Integration was fast and painless.",
+        name: "Ibrahim Sadiq",
+        role: "Property Developer",
+        image: <img src={Ibrahim} alt="PROFILE IMAGE" className="rounded-full"  />,
+        message: "With Zoya, I can compare suppliers and estimate project costs more accurately.",
+        rating: 5
+    },
+    {
+        name: "Blessing Okafor",
+        role: "Quantity Surveyor",
+        image: <img src={Blessing} alt="PROFILE IMAGE" className="rounded-full"  />,
+        message: "Zoya reduces guesswork by giving access to clear and reliable building material information.",
+        rating: 5
+    },
+    {
+        name: "Sola Adebayo",
+        role: "Aspiring Homeowner",
+        image: <img src={Sola} alt="PROFILE IMAGE" className="rounded-full"  />,
+        message: "Zoya showed me that building my own house is possible with proper planning.",
         rating: 5
     },
 ];
@@ -82,8 +104,8 @@ export default function TestimonialsCarousel() {
                             className="min-w-full px-4"
                         >
                             <div className="max-w-xl mx-auto text-center p-6 rounded-xl bg-white/70 dark:bg-black/40 shadow-sm">
-                                <div className="w-20 h-20 mx-auto py ">
-                                    <img src={Profile} alt="PROFILE IMAGE" className="rounded-full" />
+                                <div className="w-20 h-20 mx-auto ">
+                                    {item.image}
                                 </div>
                                 <p className="text-lg italic pt-2">
                                     “{item.message}”

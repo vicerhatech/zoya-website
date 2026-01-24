@@ -1,4 +1,5 @@
 import { FaXTwitter, FaLinkedinIn, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/purple-logo.png"
 import logo2 from "../../assets/images/white-log.png"
 
@@ -7,17 +8,17 @@ import logo2 from "../../assets/images/white-log.png"
 const Footer = () => {
     return (
         <>
-            <footer className="bg-purple-800 w-full h-full sm:h-72 py-12 px-10 sm:px-40">
-                <div className="flex flex-col sm:flex-row gap-10 sm:gap-48 mb-5 ">
+            <footer className="bg-purple-800 w-full h-full sm:h-full pt-12 pb-8 px-10 lg:px-40 md:px-25">
+                <div className="flex flex-col md:flex-row gap-10 lg:gap-48 md:gap-20 mb-5 ">
                     <div className="flex flex-col">
 
                         <div className="flex">
-                            <a href="#" className="bg-white rounded-full py-2 "><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></a>
-                            <a href="#" className="bg-black rounded-full py-2"><img src={logo2} alt="Company logo" className="h-5 px-2 cursor-pointer dark:border-white hidden dark:flex" /></a>
+                            <Link to="/" className="bg-white rounded-full py-2 "><img src={logo} alt="Company logo" className="h-5 px-2 cursor-pointer dark:hidden" /></Link>
+                            <Link to="/" className="bg-black rounded-full py-2"><img src={logo2} alt="Company logo" className="h-5 px-2 cursor-pointer dark:border-white hidden dark:flex" /></Link>
 
-                            <a href="#"><span className=" px-2 py-10 text-lg font-bold text-white dark:text-black cursor-pointer">
+                            <Link to="/"><span className=" px-2 py-10 text-lg font-bold text-white dark:text-black cursor-pointer">
                                 Zoya
-                            </span></a>
+                            </span></Link>
                         </div>
                         <p className="w-full sm:w-40 pt-2 text-white dark:text-black">Your futuristic hub for supply needs and building materials across Nigeria.</p>
                     </div>
@@ -31,17 +32,16 @@ const Footer = () => {
 
                     <div>
                         <p className="font-bold text-white dark:text-black" >Quick Links</p>
-                        <a href="/" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Home</p></a>
-                        <a href="#theProblem" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Problem</p></a>
-                        <a href="#theSolution" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Solution</p></a>
-                        <a href="#howZoyaWorks" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>How it works</p></a>
+                        <Link to="/" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Home</p></Link>
+                        <Link to="#theProblem" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Problem</p></Link>
+                        <Link to="#theSolution" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Solution</p></Link>
+                        <Link to="#howZoyaWorks" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>How it works</p></Link>
                     </div>
 
                     <div>
                         <p className="font-bold text-white dark:text-black" >Legal</p>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Privacy Policy</p></a>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Terms of Service</p></a>
-                        <a href="" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Cookie Policy</p></a>
+                        <Link to="/policy" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Privacy Policy</p></Link>
+                        <Link to="/terms" className="dark:hover:text-white hover:text-black text-white dark:text-black"><p>Terms of Service</p></Link>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@ const Footer = () => {
 
                     <div className="flex gap-10 sm:gap-4 justify-center ">
                         <a
-                            href="/"
+                            href="https://www.x.com/zoyasupply"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="transition hover:text-purple-800"

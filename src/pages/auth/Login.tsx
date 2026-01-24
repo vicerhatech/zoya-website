@@ -6,19 +6,19 @@ import GoogleIcon from "../../components/other/google-icon";
 
 
 
-type UserType = "buyer" | "courier"
+type UserType = "buyer" | "supplier"
 
 interface BuyerData {
     email: string
     password: string
 }
 
-interface CourierData {
+interface SupplierData {
     email: string
     password: string
 }
 
-export default function SignupPage() {
+export default function LoginPage() {
     const [userType, setUserType] = useState<UserType>("buyer");
 
 
@@ -30,7 +30,7 @@ export default function SignupPage() {
 
     })
 
-    const [courierData, setCourierData] = useState<CourierData>({
+    const [supplierData, setSupplierData] = useState<SupplierData>({
         email: "",
         password: "",
     })
@@ -40,9 +40,9 @@ export default function SignupPage() {
         setBuyerData(prev => ({ ...prev, [name]: value }))
     }
 
-    const handleCourierChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleSupplierChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target
-        setCourierData(prev => ({ ...prev, [name]: value }))
+        setSupplierData(prev => ({ ...prev, [name]: value }))
     }
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -51,7 +51,7 @@ export default function SignupPage() {
         const payload =
             userType === "buyer"
                 ? { userType, ...buyerData }
-                : { userType, ...courierData }
+                : { userType, ...supplierData }
 
         await fetch("/api/signup", {
             method: "POST",
@@ -64,9 +64,9 @@ export default function SignupPage() {
 
         <div className="dark:bg-black pt-28 pb-15">
 
-            <div className=" flex flex-col-reverse sm:flex-row mx-3 sm:mx-40 sm:justify-between sm:rounded-br-none rounded-b-3xl sm:rounded-tl-3xl sm:rounded-bl-3xl">
+            <div className=" flex flex-col-reverse lg:flex-row mx-3 lg:mx-40 lg:justify-between lg:rounded-br-none rounded-b-3xl lg:rounded-tl-3xl lg:rounded-bl-3xl">
 
-                <form onSubmit={handleSubmit} className=" px-5 sm:px-10 w-fit h-full shadow-2xl bg-white sm:rounded-br-none rounded-b-3xl sm:rounded-tl-3xl sm:rounded-bl-3xl">
+                <form onSubmit={handleSubmit} className=" px-5 lg:px-0 sm:px-20 w-full h-full shadow-2xl bg-white lg:rounded-br-none rounded-b-3xl lg:rounded-tl-3xl lg:rounded-bl-3xl">
 
                     <div className="pt-8">
                         <h2 className="font-bold text-3xl text-center">Log In</h2>
@@ -91,15 +91,15 @@ export default function SignupPage() {
 
                         <button
                             type="button"
-                            onClick={() => setUserType("courier")}
+                            onClick={() => setUserType("supplier")}
                             className={`sm:px-15 px-6 py-3 text-xl font-bold rounded-2xl transition
-                            ${userType === "courier"
+                            ${userType === "supplier"
                                     ? "bg-purple-800 text-white"
                                     : "bg-white text-purple-800 border-3 border-purple-800"
                                 }
     `}
                         >
-                            Courier
+                            Supplier
                         </button>
                     </div>
 
@@ -107,12 +107,12 @@ export default function SignupPage() {
 
                     {/* Buyer-only */}
                     {userType === "buyer" && (
-                        <>
+                        <div className="sm:px-20">
 
                             <div className="py-3 gap-20">
                                 <div className="flex flex-col">
                                     <label htmlFor="email" className="font-bold text-xl sm:text-lg text-purple-900">Email <span className="text-red-600">*</span></label>
-                                    <input type="email" name="email" placeholder="Email" className="border w-full sm:w-80 border-black outline-purple-800 rounded-xl px-2 h-10 mt-1 font-bold" required
+                                    <input type="email" name="email" placeholder="Email" className="border w-full lg:w-80 sm:w-96 border-black outline-purple-800 rounded-xl px-2 h-10 mt-1 font-bold" required
                                         value={buyerData.email}
                                         onChange={handleBuyerChange}
                                     />
@@ -123,7 +123,7 @@ export default function SignupPage() {
                             <div className="py-2">
                                 <div className="flex flex-col">
                                     <label htmlFor="password" className="font-bold text-xl sm:text-lg text-purple-900">Password <span className="text-red-600">*</span></label>
-                                    <input type="password" name="password" placeholder="Password" className="border w-full sm:w-80 border-black outline-purple-800 rounded-xl px-2 h-10 mt-1 font-bold" required
+                                    <input type="password" name="password" placeholder="Password" className="border w-full lg:w-80 sm:w-96 border-black outline-purple-800 rounded-xl px-2 h-10 mt-1 font-bold" required
                                         value={buyerData.password}
                                         onChange={handleBuyerChange}
                                     />
@@ -131,18 +131,18 @@ export default function SignupPage() {
 
                             </div>
 
-                        </>
+                        </div>
                     )}
 
                     {/* Courier-only */}
-                    {userType === "courier" && (
+                    {userType === "supplier" && (
                         <>
                             <div className="py-3 gap-20">
                                 <div className="flex flex-col">
                                     <label htmlFor="email" className="font-bold text-xl sm:text-lg text-purple-900">Email <span className="text-red-600">*</span></label>
                                     <input type="email" name="email" placeholder="Email" className="border w-full sm:w-80 border-black outline-purple-800 rounded-xl px-2 h-10 mt-1 font-bold" required
-                                        value={courierData.email}
-                                        onChange={handleCourierChange}
+                                        value={supplierData.email}
+                                        onChange={handleSupplierChange}
                                     />
                                 </div>
                             </div>
@@ -152,8 +152,8 @@ export default function SignupPage() {
                                 <div className="flex flex-col">
                                     <label htmlFor="password" className="font-bold text-xl sm:text-lg text-purple-900">Password <span className="text-red-600">*</span></label>
                                     <input type="password" name="password" placeholder="Password" className="border w-full sm:w-80 border-black outline-purple-800 rounded-xl px-2 h-10 mt-1 font-bold" required
-                                        value={courierData.password}
-                                        onChange={handleCourierChange}
+                                        value={supplierData.password}
+                                        onChange={handleSupplierChange}
                                     />
                                 </div>
 
@@ -163,7 +163,7 @@ export default function SignupPage() {
                         </>
                     )}
 
-                    <div className="pt-2 flex gap-6 justify-between">
+                    <div className="pt-2 flex gap-6 justify-between sm:px-20">
                         <div className="flex gap-2">
                             <input type="checkbox" name="remember" id="remember" className="w-5 h-5" required /> <p>Remember Password</p>
                         </div>
@@ -180,7 +180,7 @@ export default function SignupPage() {
 
                 </form>
 
-                <div className="py-10 bg-purple-800 sm:inline sm:w-full sm:rounded-r-3xl sm:rounded-tl-none rounded-t-3xl">
+                <div className="py-10 bg-purple-800 lg:inline lg:w-full lg:rounded-r-3xl lg:rounded-tl-none rounded-t-3xl">
                     <div className="flex flex-col">
                         <div className="flex justify-center">
                             <a href="/" className="signup-right-section bg-white py-2 dark:hidden"><img src={logo} alt="Company logo" className="signup-logo h-5 px-2 cursor-pointer dark:hidden flex" /></a>
@@ -200,7 +200,7 @@ export default function SignupPage() {
                             <span className="my-auto"><hr className="w-25 mx-2" /></span> <p className="font-bold text-white">OR</p> <span className="my-auto"><hr className="w-25 mx-2" /></span>
                         </div>
 
-                        <div className="flex flex-col justify-center mt-2 mx-10 sm:mx-30">
+                        <div className="flex flex-col justify-center mt-1 mx-10 sm:mx-40  lg:mx-20">
                             <button type="submit" className=" flex gap-3 px-5 py-2 rounded-lg bg-white mt-1 sm:mt-3 mb-2 hover:bg-black hover:text-white font-bold cursor-pointer justify-center tracking-wide"><span><GoogleIcon className="w-5 h-5" />
                             </span>Continue with Google</button>
 
