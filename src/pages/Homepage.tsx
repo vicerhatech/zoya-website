@@ -46,7 +46,7 @@ const Home = () => {
                         </Link>
                     </div> */}
 
-                    <div className="flex gap-0 sm:gap-20 animate-fade-up animate-infinite animate-duration-5000 sm:w-120 lg:mx-0 sm:h-50 sm:mx-auto sm:flex-row flex-col ">
+                    <div className="flex gap-0 pb-10 sm:pb-0 items-center sm:gap-20 animate-fade-up animate-infinite animate-duration-5000 sm:w-120 lg:mx-0 sm:h-50 sm:mx-auto sm:flex-row flex-col ">
                         <a href="">
                             <img src={GooglePlay} alt="Google play store" className="transform transition-transform duration-300 ease-out hover:scale-112 scale-107" />
                         </a>
@@ -63,14 +63,14 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="bg-purple-50 my-10 py-18 px-12" id="theProblem">
+            <section className="bg-purple-50 my-10 sm:pt-18 sm:pb-18 pt-13 pb-13 sm:px-12 px-6" id="theProblem">
                 <div>
-                    <h2 className="text-3xl font-bold text-center">Why Most Building Projects Fail in Nigeria</h2>
+                    <h2 className="text-3xl font-bold text-center w-full">Why Most Building Projects Fail in Nigeria</h2>
                     <p className="text-gray-800 text-center pt-3 pb-15 text-lg">Without proper planning, many Nigerians start building only to stop halfway when funds run out <span className="inline lg:block">or costs spiral out of control.</span></p>
                 </div>
 
-                <div className="flex gap-10 justify-center timeline-view animate-slide-in-left animate-range-entry">
-                    <div className="bg-white border-l-4 border-red-500 rounded-xl p-4 shadow-md w-75">
+                <div className="flex gap-10 justify-center timeline-view animate-slide-in-left animate-range-entry flex-col sm:flex-row items-center">
+                    <div className="bg-white border-l-4 border-red-500 rounded-xl p-4 shadow-md w-70">
                         <div className="w-8 h-8 bg-red-100 text-red-600 flex items-center justify-center rounded-lg mb-2 font-bold">
                             <X className="w-6 h-6" />
                         </div>
@@ -109,8 +109,8 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="flex px-20 py-5 lg:flex-row sm:flex-col lg:gap-40 sm:gap-4">
-                <div>
+            <section className="flex px-5 sm:px-20 py-5 lg:flex-row sm:flex-col flex-col lg:gap-40 sm:gap-4 gap-4">
+                <div className="flex mx-auto">
                     <img src={CostEstimate} alt="Cost-estimate" className="lg:w-130 lg:h-120 rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
                 </div>
 
@@ -118,10 +118,10 @@ const Home = () => {
                     <div className="w-10 h-10 mt-5 rounded-full bg-purple-100 flex items-center justify-center">
                         <Calculator className="w-5 h-5 text-purple-800" />
                     </div>
-                    <h2 className="font-bold text-3xl lg:text-left sm:text-center lg:w-120 lg:pb-5 sm:w-full sm:pb-2">Clear Cost Estimates Before You Spend a Naira</h2>
+                    <h2 className="font-bold text-3xl lg:text-left sm:text-center lg:w-120 lg:pb-5 sm:w-full sm:pb-2 pb-5">Clear Cost Estimates Before You Spend a Naira</h2>
                     <p className="text-gray-800 lg:text-left lg:text-lg sm:text-center sm:text-xl">One of the biggest reasons projects fail is uncertainty around cost.</p>
                     <p className="text-gray-800 lg:pb-5 lg:text-left lg:text-lg sm:text-center sm:text-xl">People start building without knowing the full picture.</p>
-                    <div className="flex flex-col gap-3 lg:pt-0 sm:pt-5">
+                    <div className="flex flex-col gap-3 lg:pt-0 sm:pt-5 pt-5">
                         <p className="flex lg:text-lg sm:text-xl">
                             <span className="hover:scale-110 pr-3 pt-1"><div className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 rounded-full bg-purple-800 flex items-center justify-center">
                                 <Check className="lg:w-4 lg:h-4 sm:w-6 sm:h-6 text-white" strokeWidth={3} />
@@ -141,31 +141,31 @@ const Home = () => {
                             </div></span>Avoid abandoned projects caused by poor planning</p>
                     </div>
 
-                    <h3 className="font-bold lg:text-lg pt-8 w-120 sm:pt-5 sm:w-full sm:text-xl">When people know the numbers, fear reduces and confidence grows.</h3>
+                    <h3 className="font-bold lg:text-lg pt-8 sm:pt-5 sm:w-full sm:text-xl">When people know the numbers, fear reduces and confidence grows.</h3>
                 </div>
             </section>
 
-            <section className="bg-purple-50 lg:my-10 lg:pt-20 lg:pb-12 px-20 flex lg:flex-row sm:flex-col lg:gap-50 sm:gap-4 sm:pt-5">
+            <section className="bg-purple-50 lg:my-10 lg:pt-20 lg:pb-12 px-5 flex-col sm:px-20 flex lg:flex-row sm:flex-col lg:gap-50 sm:gap-4 sm:pt-5 pt-10">
                 <div>
                     <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
                         <Eye className="w-5 h-5 text-purple-800" />
                     </div>
-                    <h2 className="font-bold text-3xl lg:text-left sm:text-center lg:w-120 lg:pb-5 sm:w-full sm:pb-2">Real Material Prices, Transparent and Easy to Compare</h2>
+                    <h2 className="font-bold text-3xl lg:text-left sm:text-center lg:w-120 lg:pb-5 sm:w-full sm:pb-2 pb-5">Real Material Prices, Transparent and Easy to Compare</h2>
                     <p className="text-gray-800 lg:text-lg lg:text-left sm:text-center sm:text-xl">Material prices in Nigeria fluctuate, and misinformation is common.</p>
                     <p className="text-gray-800 lg:pb-5 lg:text-lg lg:text-left sm:text-center sm:text-xl">Zoya brings price transparency into construction planning.</p>
 
-                    <div className="bg-purple-100 w-120 h-fit p-5 sm:mx-auto lg:mx-0 lg:mt-0 sm:mt-5 rounded-xl shadow-xl">
-                        <div className="flex justify-between pb-4">
+                    <div className="bg-purple-100 sm:w-120 w-85 h-fit p-5 sm:mx-auto lg:mx-0 lg:mt-0 sm:mt-5 mt-5 rounded-xl shadow-xl">
+                        <div className="flex sm:justify-between justify-around pb-4">
                             <p className="font-semibold">Cement (50kg bag)</p>
                             <p className="text-purple-800 font-bold">₦5,200 - ₦5,800</p>
                         </div>
 
-                        <div className="flex justify-between pb-4">
+                        <div className="flex sm:justify-between justify-around pb-4">
                             <p className="font-semibold">6-inch Blocks (per piece)</p>
                             <p className="text-purple-800 font-bold">₦380 - ₦450</p>
                         </div>
 
-                        <div className="flex justify-between">
+                        <div className="flex sm:justify-between justify-around">
                             <p className="font-semibold">Iron Rods (12mm)</p>
                             <p className="text-purple-800 font-bold">₦7,500 - ₦8,200</p>
                         </div>
@@ -189,20 +189,20 @@ const Home = () => {
 
                 </div>
 
-                <div>
-                    <img src={ConstructionWork} alt="Construction work" className="lg:w-120 lg:h-115  sm:mt-5 sm:mb-15 lg:mb-0 lg:mt-0 rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
+                <div className="mb-5 sm:mb-0 ">
+                    <img src={ConstructionWork} alt="Construction work" className="lg:w-120 lg:h-115  sm:mt-5 my-10 sm:mb-15 lg:mb-0 lg:mt-0 rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105" />
                 </div>
 
             </section>
 
-            <section className="bg-blue-800 px-10 py-18 timeline-view animate-blurred-fade-in animate-range-entry" id="theSolution">
+            <section className="bg-blue-800 sm:px-10 px-2 sm:py-18 py-10 timeline-view animate-blurred-fade-in animate-range-entry" id="theSolution">
                 <div className="text-center text-white">
                     <h2 className="text-3xl font-bold">Understand Each Build Phase, One Step at a Time</h2>
-                    <p className="pt-2">Many people don't fail because they lack money, they fail because they don't understand the process.</p>
+                    <p className="sm:pt-2 pt-4">Many people don't fail because they lack money, they fail because they don't understand the process.</p>
                     <p>Zoya breaks construction into clear, manageable phases.</p>
                 </div>
 
-                <div className="flex gap-10 justify-center pt-13 pb-9">
+                <div className="flex gap-10 sm:flex-row flex-col justify-center pt-13 pb-9 items-center">
                     <div className="bg-blue-900 border-t-6 border-orange-600 rounded-xl p-4 shadow-md w-68">
                         <div className="flex justify-between items-center mb-4">
                             <span className="text-orange-500 font-semibold">Phase 1</span>
@@ -266,19 +266,17 @@ const Home = () => {
 
             </section>
 
-            {/* lg:flex-row sm:flex-col lg:gap-40 sm:gap-4 */}
 
-
-            <section className="flex px-20 lg:py-25 lg:gap-40 sm:gap-4 lg:flex-row sm:flex-col">
+            <section className="flex px-5 flex-col sm:px-20 lg:py-13 lg:gap-40 sm:gap-4 lg:flex-row sm:flex-col">
                 <div>
                     <img src={SavePurpose} alt="save with purpose" className="lg:w-130 lg:h-90 rounded-2xl transform transition-transform duration-300 ease-out hover:scale-105 mt-15" />
                 </div>
 
                 <div className="sm:pt-10 lg:pt-0">
-                    <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center sm:ml-4 lg:ml-0">
+                    <div className="w-10 h-10 mt-5 rounded-full bg-purple-100 flex items-center justify-center sm:ml-4 lg:ml-0">
                         <PiggyBank className="w-5 h-5 text-purple-800" />
                     </div>
-                    <h2 className="font-bold text-3xl lg:text-left sm:text-center lg:w-120 lg:pb-5 sm:w-full sm:pb-2">Save With Purpose and Track Your Progress</h2>
+                    <h2 className="font-bold text-3xl lg:text-left sm:text-center lg:w-120 lg:pb-5 sm:w-full sm:pb-2 pb-5">Save With Purpose and Track Your Progress</h2>
                     <p className="text-gray-800 lg:text-lg lg:text-left sm:text-center sm:text-xl">Zoya isn't just about building, it's about preparing wisely. </p>
                     <p className="text-gray-800 pb-5 lg:text-lg lg:text-left sm:text-center sm:text-xl">Instead of saving aimlessly, save with direction.</p>
                     <div className="bg-orange-900 py-5 px-5 rounded-2xl">
@@ -326,21 +324,21 @@ const Home = () => {
 
 
 
-            <div className="flex flex-col lg:flex-row sm:flex-col justify-around  pt-20 px-6 dark:bg-black sm:text-center lg:text-left ">
+            <div className="flex flex-col lg:flex-row sm:flex-col justify-around  pt-12 px-6 dark:bg-black sm:text-center lg:text-left ">
                 <div className=" lg:py-20 sm:py-5 ">
 
                     <div className="intro">
-                        <p className="text-purple-800 font-extrabold text-5xl w-fit sm:mx-auto lg:mx-0">Zoya, Procurement <span className="lg:hidden sm:inline" >Made Simple</span> </p>
-                        <p className="lg:inline-block sm:hidden text-purple-800 font-extrabold text-5xl w-fit sm:mx-auto lg:mx-0 ">Made Simple</p>
+                        <p className="text-purple-800 font-extrabold text-5xl w-fit sm:mx-auto lg:mx-0">Zoya, Procurement <span className="lg:hidden inline-block sm:inline" >Made Simple</span> </p>
+                        <p className="lg:inline-block hidden sm:hidden text-purple-800 font-extrabold text-5xl w-fit sm:mx-auto lg:mx-0 ">Made Simple</p>
                     </div>
 
 
 
 
                     <div className="intro-text py-6">
-                        <p className="text-2xl text-gray-800 dark:text-white">From truckloads of sand to bags of cement, <span className="lg:hidden sm:inline" >compare suppliers, see real prices, and order in bulk; All on Zoya</span></p>
-                        <p className="lg:inline-block sm:hidden text-2xl text-gray-800 dark:text-white">compare suppliers, see real prices, and order in bulk;</p>
-                        <p className="lg:block sm:hidden text-2xl text-gray-800 dark:text-white">All on Zoya</p>
+                        <p className="text-2xl text-gray-800 dark:text-white">From truckloads of sand to bags of cement, <span className="lg:hidden inline sm:inline" >compare suppliers, see real prices, and order in bulk; All on Zoya</span></p>
+                        <p className="lg:inline-block sm:hidden hidden text-2xl text-gray-800 dark:text-white ">compare suppliers, see real prices, and order in bulk;</p>
+                        <p className="lg:block sm:hidden hidden text-2xl text-gray-800 dark:text-white">All on Zoya</p>
                     </div>
 
                     {/* <div>
@@ -351,7 +349,7 @@ const Home = () => {
                 </div>
 
                 <div className="sm:justify-center sm:flex">
-                    <img src="/images/why-zoya.PNG" alt="Intro Text" className="why-image rounded-xl transform transition-transform duration-300 ease-out hover:scale-105" />
+                    <img src="/images/why-zoya.PNG" alt="Intro Text" className="w-full h-full lg:w-125 lg:h-112.5 rounded-xl transform transition-transform duration-300 ease-out hover:scale-105" />
                 </div>
 
 
@@ -489,7 +487,7 @@ const Home = () => {
                             <div className="mx-auto">
                                 <h2 className="text-4xl font-bold">Ready to transform your procurement?</h2>
                             </div>
-                            <h2 className="font-bold text-2xl w-150 pt-2 text-purple-900">Start Planning Your Dream Home Today</h2>
+                            <h2 className="font-bold text-2xl sm:w-150 w-full pt-2 text-purple-900">Start Planning Your Dream Home Today</h2>
                             <p className="pt-5">Housing challenges in Nigeria are real, but so is the potential for change.</p>
                             <p>With clarity, transparency, and steady saving, building a home becomes achievable.</p>
                         </div>
@@ -499,7 +497,7 @@ const Home = () => {
                             <p className="py-5 text-center text-gray-800 lg:text-lg font-bold dark:text-black sm:text-2xl">Join thousands of businesses already using Zoya for their supply needs</p>
                         </div>
 
-                        <div className="flex gap-10 sm:gap-20 justify-center animate-fade-up animate-infinite animate-duration-5000">
+                        <div className="flex gap-10 sm:gap-20 justify-center animate-fade-up animate-infinite animate-duration-5000 mb-5 sm:mb-3">
                             {/* <button className="rounded-lg bg-purple-800 px-2 sm:px-4 py-3 text-lg font-medium text-white hover:bg-purple-900 dark:hover:bg-black dark:text-black dark:hover:text-white transition dark:bg-white cursor-pointer dark:border-black">
                                 Get Started  ➔
                             </button> */}
