@@ -497,7 +497,7 @@ const Home = () => {
                             <p className="py-5 text-center text-gray-800 lg:text-lg font-bold dark:text-black sm:text-2xl">Join thousands of businesses already using Zoya for their supply needs</p>
                         </div>
 
-                        <div className="flex gap-10 sm:gap-20 justify-center animate-fade-up animate-infinite animate-duration-5000 mb-5 sm:mb-3">
+                        <div className="flex gap-10 sm:gap-20 justify-center animate-fade-up animate-infinite animate-duration-5000 mb-5 sm:mb-3"> 
                             {/* <button className="rounded-lg bg-purple-800 px-2 sm:px-4 py-3 text-lg font-medium text-white hover:bg-purple-900 dark:hover:bg-black dark:text-black dark:hover:text-white transition dark:bg-white cursor-pointer dark:border-black">
                                 Get Started  ➔
                             </button> */}
