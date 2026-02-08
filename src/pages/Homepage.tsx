@@ -58,7 +58,7 @@ const Home = () => {
                 </div>
 
                 <div className="animate-bounce-fade-in animate-delay-150 sm:px-10 lg:px-0">
-                    <div className=" lg:w-106 lg:h-95 sm:w-170 sm:h-100 bg-orange-500 orange-box absolute z-1 right- rotate-3 rounded-2xl"></div>
+                    <div className=" lg:w-106 lg:h-95 sm:w-170 sm:h-100 w-full h-full bg-orange-500 orange-box absolute z-1 right- rotate-3 rounded-2xl"></div>
                     <img src={BuildingPlans} alt="building plan" className=" lg:w-155 lg:h-95 sm:w-2xl h-95 building-plan relative z-30 rounded-2xl" />
                 </div>
             </section>
