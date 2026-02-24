@@ -3,9 +3,11 @@ import Navbar from './components/layout/navbar';
 import Home from './pages/Homepage';
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
+import Contact from "./pages/ContactUs";
 import Footer from "./components/layout/footer";
 import Policy from "./pages/privacypolicy";
 import Terms from "./pages/termsofservice";
+// import About from "./pages/about"
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/policy" element={<Policy />} />
             <Route path="/terms" element={<Terms />} />
+            {/* <Route path="/about" element={<About />} /> */}
 
           </Routes>
       </main>

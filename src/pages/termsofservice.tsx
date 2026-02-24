@@ -77,7 +77,7 @@ const Terms = () => {
                     <p className="pt-5">
                         <p className="font-bold">7. Your Rights</p>
                         <p>Users can request access, correction, or deletion of their data by contacting
-                            support@zoyaprocurement.com. EU and Nigerian users have rights under GDPR and NDPR including the right to data portability and withdrawal of consent.</p>
+                            support@zoyasupply.com. EU and Nigerian users have rights under GDPR and NDPR including the right to data portability and withdrawal of consent.</p>
                     </p>
 
                     <p className="pt-5">

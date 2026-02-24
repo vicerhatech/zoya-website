@@ -145,7 +145,7 @@ export default function SignupPage() {
 
                         <div className="flex flex-col">
                             <label htmlFor="firstname" className="font-bold text-xl sm:text-lg text-purple-900">First Name <span className="text-red-600">*</span></label>
-                            <input type="text" name="firstName" placeholder="First Name" className="border w-full sm:w-60 border-black outline-purple-800 sm:text-md text-lg rounded-xl my-1 px-2 h-10 font-bold" required
+                            <input type="text" name="firstName" placeholder="First Name" className="border w-full sm:w-60 border-black outline-purple-800 sm:text-base text-lg rounded-xl my-1 px-2 h-10 font-bold" required
                                 value={userType === "buyer" ? buyerData.firstName : supplierData.firstName}
                                 onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
@@ -153,7 +153,7 @@ export default function SignupPage() {
 
                         <div className="flex flex-col">
                             <label htmlFor="lastname" className="font-bold text-xl sm:text-lg text-purple-900">Last Name <span className="text-red-600">*</span></label>
-                            <input type="text" name="lastName" placeholder="Last Name" className="border w-full sm:w-60 border-black outline-purple-800 sm:text-md text-lg rounded-xl mt-1 px-2 h-10 font-bold" required
+                            <input type="text" name="lastName" placeholder="Last Name" className="border w-full sm:w-60 border-black outline-purple-800 sm:text-base text-lg rounded-xl mt-1 px-2 h-10 font-bold" required
                                 value={userType === "buyer" ? buyerData.lastName : supplierData.lastName}
                                 onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
@@ -165,7 +165,7 @@ export default function SignupPage() {
                     <div className="py-3 flex gap-3 sm:gap-20 flex-col sm:flex-row">
                         <div className="flex flex-col">
                             <label htmlFor="email" className="font-bold text-xl sm:text-lg text-purple-900">Email <span className="text-red-600">*</span></label>
-                            <input type="email" name="email" placeholder="Email" className="border w-full sm:w-60 border-black outline-purple-800 rounded-xl sm:text-md text-lg mt-1 px-2 h-10 font-bold" required
+                            <input type="email" name="email" placeholder="Email" className="border w-full sm:w-60 border-black outline-purple-800 rounded-xl sm:text-base text-lg mt-1 px-2 h-10 font-bold" required
                                 value={userType === "buyer" ? buyerData.email : supplierData.email}
                                 onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
@@ -173,7 +173,7 @@ export default function SignupPage() {
 
                         <div className="flex flex-col">
                             <label htmlFor="phone" className="font-bold text-xl sm:text-lg text-purple-900">Phone Number <span className="text-red-600">*</span></label>
-                            <input type="tel" name="phone" placeholder="Phone Number" className="border w-full sm:w-60 border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                            <input type="tel" name="phone" placeholder="Phone Number" className="border w-full sm:w-60 border-black outline-purple-800 rounded-xl mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                 value={userType === "buyer" ? buyerData.phone : supplierData.phone}
                                 onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
@@ -183,7 +183,7 @@ export default function SignupPage() {
 
                     <div className="flex flex-col">
                         <label htmlFor="streetaddress" className="font-bold text-xl sm:text-lg text-purple-900">Street Address <span className="text-red-600">*</span></label>
-                        <input type="text" name="streetAddress" placeholder="Street Address" className="border  w-full border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                        <input type="text" name="streetAddress" placeholder="Street Address" className="border  w-full border-black outline-purple-800 rounded-xl mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                             value={userType === "buyer" ? buyerData.streetAddress : supplierData.streetAddress}
                             onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                         />
@@ -192,7 +192,7 @@ export default function SignupPage() {
                     <div className="py-3 flex gap-3 sm:gap-20 flex-col sm:flex-row">
                         <div className="flex flex-col">
                             <label htmlFor="state" className="font-bold text-xl sm:text-lg text-purple-900">State <span className="text-red-600">*</span></label>
-                            <input type="text" name="state" placeholder="State" className="border w-full sm:w-60  border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                            <input type="text" name="state" placeholder="State" className="border w-full sm:w-60  border-black outline-purple-800 rounded-xl mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                 value={userType === "buyer" ? buyerData.state : supplierData.state}
                                 onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
@@ -200,7 +200,7 @@ export default function SignupPage() {
 
                         <div className="flex flex-col">
                             <label htmlFor="country" className="font-bold text-xl sm:text-lg text-purple-900">Country <span className="text-red-600">*</span></label>
-                            <input type="text" name="country" placeholder="Country" className="border w-full sm:w-60  border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                            <input type="text" name="country" placeholder="Country" className="border w-full sm:w-60  border-black outline-purple-800 rounded-xl mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                 value={userType === "buyer" ? buyerData.country : supplierData.country}
                                 onChange={userType === "buyer" ? handleBuyerChange : handleSupplierChange}
                             />
@@ -215,7 +215,7 @@ export default function SignupPage() {
 
                             <div className="flex flex-col">
                                 <label htmlFor="deliveryaddress" className="sm:flex font-bold text-xl sm:text-lg text-purple-900" >Delivery Address <span className="text-red-600 px-1">*</span> <p className="text-sm sm:pt-3">(Can be changed later)</p></label>
-                                <input type="text" name="deliveryAddress" placeholder="Delivery Address" className="border  w-full border-black outline-purple-800 rounded-xl mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                                <input type="text" name="deliveryAddress" placeholder="Delivery Address" className="border  w-full border-black outline-purple-800 rounded-xl mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                     value={buyerData.deliveryAddress}
                                     onChange={handleBuyerChange}
                                 />
@@ -224,7 +224,7 @@ export default function SignupPage() {
                             <div className="py-3 flex gap-3 sm:gap-20 flex-col sm:flex-row">
                                 <div className="flex flex-col">
                                     <label htmlFor="password" className="font-bold text-xl sm:text-lg  text-purple-900">Password <span className="text-red-600">*</span></label>
-                                    <input type="password" name="password" placeholder="Password" className="border   w-full sm:w-60 border-black outline-purple-800 rounded-xl  mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                                    <input type="password" name="password" placeholder="Password" className="border   w-full sm:w-60 border-black outline-purple-800 rounded-xl  mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                         value={buyerData.password}
                                         onChange={handleBuyerChange}
                                     />
@@ -232,7 +232,7 @@ export default function SignupPage() {
 
                                 <div className="flex flex-col">
                                     <label htmlFor="confirmpassword" className="font-bold text-xl sm:text-lg text-purple-900">Confirm Password <span className="text-red-600">*</span></label>
-                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" className="border  w-full sm:w-60  border-black outline-purple-800 rounded-xl  mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" className="border  w-full sm:w-60  border-black outline-purple-800 rounded-xl  mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                         value={buyerData.confirmPassword}
                                         onChange={handleBuyerChange}
                                     />
@@ -248,7 +248,7 @@ export default function SignupPage() {
                             <div className="flex flex-col sm:flex-row sm:justify-between gap-2 sm:gap-0">
                                 <div className="flex flex-col">
                                     <label htmlFor="vehicletype" className="font-bold text-xl sm:text-lg  text-purple-900">Vehicle Type <span className="text-red-600">*</span></label>
-                                    <select name="vehicleType" onChange={handleSupplierChange} className="border rounded-xl px-2 h-10 font-bold border-black outline-purple-800 my-1 sm:text-md text-lg" required>
+                                    <select name="vehicleType" onChange={handleSupplierChange} className="border rounded-xl px-2 h-10 font-bold border-black outline-purple-800 my-1 sm:text-base text-lg" required>
                                         <option value="" disabled selected hidden>Choose Type</option>
                                         <option value="bike" className="text-sm sm:text-lg">Bike</option>
                                         <option value="car" className="text-sm sm:text-lg">Car</option>
@@ -261,7 +261,7 @@ export default function SignupPage() {
 
                                 <div className="flex flex-col">
                                     <label htmlFor="licensenumber" className="font-bold text-xl sm:text-lg text-purple-900">License Number <span className="text-red-600">*</span></label>
-                                    <input type="text" name="licenseNumber" placeholder="License Number" className="border w-full sm:w-40 border-black outline-purple-800 rounded-xl sm:text-md text-lg px-2 h-10 my-1 font-bold" required
+                                    <input type="text" name="licenseNumber" placeholder="License Number" className="border w-full sm:w-40 border-black outline-purple-800 rounded-xl sm:text-base text-lg px-2 h-10 my-1 font-bold" required
                                         value={supplierData.licenseNumber}
                                         onChange={handleSupplierChange}
                                     />
@@ -270,7 +270,7 @@ export default function SignupPage() {
                                 <div className="flex flex-col">
                                     <label htmlFor="availability" className="font-bold text-xl sm:text-lg text-purple-900">Availability <span className="text-red-600">*</span></label>
 
-                                    <select name="availability" onChange={handleSupplierChange} className="border rounded-xl px-2 h-10 mt-1 font-bold border-black outline-purple-800 sm:text-md text-lg" required>
+                                    <select name="availability" onChange={handleSupplierChange} className="border rounded-xl px-2 h-10 mt-1 font-bold border-black outline-purple-800 sm:text-base text-lg" required>
                                         <option value="" disabled selected>Choose Availability</option>
                                         <option value="full-time" className="text-sm sm:text-lg">Full Time</option>
                                         <option value="part-time" className="text-sm sm:text-lg">Part Time</option>
@@ -285,7 +285,7 @@ export default function SignupPage() {
                             <div className="py-3 flex gap-3 sm:gap-20 flex-col sm:flex-row">
                                 <div className="flex flex-col">
                                     <label htmlFor="password" className="font-bold text-xl sm:text-lg  text-purple-900">Password <span className="text-red-600">*</span></label>
-                                    <input type="password" name="password" placeholder="Password" className="border   w-full sm:w-60 border-black outline-purple-800 rounded-xl  mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                                    <input type="password" name="password" placeholder="Password" className="border   w-full sm:w-60 border-black outline-purple-800 rounded-xl  mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                         value={buyerData.password}
                                         onChange={handleSupplierChange}
                                     />
@@ -293,7 +293,7 @@ export default function SignupPage() {
 
                                 <div className="flex flex-col">
                                     <label htmlFor="confirmpassword" className="font-bold text-xl sm:text-lg text-purple-900">Confirm Password <span className="text-red-600">*</span></label>
-                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" className="border  w-full sm:w-60  border-black outline-purple-800 rounded-xl  mt-1 sm:text-md text-lg px-2 h-10 font-bold" required
+                                    <input type="password" name="confirmPassword" placeholder="Confirm Password" className="border  w-full sm:w-60  border-black outline-purple-800 rounded-xl  mt-1 sm:text-base text-lg px-2 h-10 font-bold" required
                                         value={buyerData.confirmPassword}
                                         onChange={handleSupplierChange}
                                     />
