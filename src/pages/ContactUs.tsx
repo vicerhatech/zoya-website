@@ -4,6 +4,30 @@ import { MapPin, FileText, MessageSquare, CheckCircle, Clock, Send } from "lucid
 
 
 function Contact() {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault(); 
+
+  const formData = new FormData(e.currentTarget);
+
+  try {
+    const res = await fetch("https://formspree.io/f/xgolgley", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (res.ok) {
+      window.location.href = "/thank-you";
+    } else {
+      alert("Failed to send message. Please try again.");
+    }
+  } catch (error) {
+    console.error("Form submission error:", error);
+    alert("An error occurred. Please try again.");
+  }
+};
     return (
         <div className=" dark:bg-black">
             <section className="bg-purple-100 sm:w-full h-fit p-5 shadow-xl pt-20 sm:pt-25 pb-15 sm:px-30 dark:bg-purple-800/30 ">
@@ -126,7 +150,7 @@ function Contact() {
 
                 <div className="shadow-2xl p-7 w-full rounded-4xl animate-flip-x timeline-view animate-range-entry dark:border dark:border-white">
                     <h2 className="font-bold lg:text-3xl sm:text-4xl text-3xl">Send Us a Message</h2>
-                    <form action="">
+                    <form onSubmit={handleSubmit}>
                         <div className="pt-4">
                             <label htmlFor="fullname" className="lg:text-base text-2xl">Full Name <span><b className="text-red-600">*</b></span></label>
                             <input type="text" name="fullname" id="fullname" className=" w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder:font-semibold lg:text-base text-2xl placeholder:dark:text-white " placeholder="Enter your full name" required />
@@ -140,13 +164,13 @@ function Contact() {
 
                             <div>
                                 <label htmlFor="phone-number" className="lg:text-base text-2xl">Phone Number <span><b className="text-red-600">*</b></span></label>
-                                <input type="tel" name="phone-number" id="phone-number" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="+234 800 000 0000" required />
+                                <input type="tel" name="phone_number" id="phone-number" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="+234 800 000 0000" required />
                             </div>
                         </div>
 
                         <div className="flex gap-6 pt-4 flex-col sm:flex-row">
                             <div>
-                                <label htmlFor="project-type" className="lg:text-base text-2xl">Project Type <span><b className="text-red-600">*</b></span></label>
+                                <label htmlFor="project_type" className="lg:text-base text-2xl">Project Type <span><b className="text-red-600">*</b></span></label>
                                 <select name="project-type" className="w-full h-12 border-2 border-gray-500 outline-purple-800 focus:border-purple-800 text-black rounded-lg px-2 my-2 lg:text-base text-2xl dark:text-white " required>
                                     <option value="" disabled selected className="text-black dark:text-black">Select project type</option>
                                     <option value="Residential-Building" className=" dark:text-black">Residential Building</option>
@@ -158,9 +182,9 @@ function Contact() {
                             </div>
 
                             <div>
-                                <label htmlFor="project-type" className="lg:text-base text-2xl">I am a... <span><b className="text-red-600">*</b></span></label>
+                                <label htmlFor="roles" className="lg:text-base text-2xl">I am a... <span><b className="text-red-600">*</b></span></label>
                                 <select name="availability" className="w-full border-2 border-gray-500 rounded-lg px-2 h-12 my-2 text-black outline-purple-800 focus:border-purple-800 lg:text-base text-2xl dark:text-white " required>
-                                    <option value="" disabled selected  className=" dark:text-black">Choose role</option>
+                                    <option value="" disabled selected className=" dark:text-black">Choose role</option>
                                     <option value="Buyer" className=" dark:text-black">Buyer</option>
                                     <option value="Supplier" className=" dark:text-black">Supplier</option>
                                     <option value="Corporate-Partner" className=" dark:text-black">Corporate Partner</option>
@@ -173,20 +197,23 @@ function Contact() {
                             <label htmlFor="Subject" className="lg:text-base text-2xl">Subject <span><b className="text-red-600">*</b></span></label>
                             <input type="text" name="subject" id="subject" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="What is this about?" required />
                         </div>
+                        
 
-                        <div className="pt-4 hidden lg:inline-block">
-                            <label htmlFor="Message" className="lg:text-base text-2xl">Message <span><b className="text-red-600">*</b></span></label>
-                            <textarea name="message" rows={5} cols={59} id="message" className="border-2 border-gray-500 outline-purple-800 text-black rounded-lg py-3 px-5 my-2 placeholder:font-semibold lg:text-base text-2xl lg:mx-0 placeholder:dark:text-white" placeholder="Tell us about your project or question..." required></textarea>
-                        </div>
-
-                        <div className="pt-4 lg:hidden hidden sm:inline-block">
-                            <label htmlFor="Message" className="lg:text-base text-2xl">Message <span><b className="text-red-600">*</b></span></label>
-                            <textarea name="message" rows={5} cols={51} id="message" className="border-2 border-gray-500 outline-purple-800 text-black rounded-lg py-3 px-5 my-2 placeholder:font-semibold lg:text-base text-2xl lg:mx-0" placeholder="Tell us about your project or question..." required></textarea>
-                        </div>
-
-                        <div className="pt-4 sm:hidden inline-block ">
-                            <label htmlFor="Message" className="lg:text-base text-2xl">Message <span><b className="text-red-600">*</b></span></label>
-                            <textarea name="message" rows={5} cols={23} id="message" className="border-2 border-gray-500 outline-purple-800 text-black rounded-lg py-3 px-5 my-2 placeholder:font-semibold lg:text-base text-2xl lg:mx-0" placeholder="Tell us about your project or question..." required></textarea>
+                        <div className="pt-4 w-full">
+                            <label htmlFor="message" className="text-2xl lg:text-base font-semibold dark:text-white">
+                                Message <span className="text-red-600">*</span>
+                            </label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                rows={5}
+                                className="mt-2 w-full border-2 border-gray-500 outline-purple-800 rounded-lg p-5 text-2xl placeholder:font-semibold placeholder:dark:text-white
+               sm:text-xl md:text-xl lg:text-lg
+               focus:ring-2 focus:ring-purple-500 focus:border-purple-500
+               transition-all duration-300"
+                                placeholder="Tell us about your project or question..."
+                                required
+                            ></textarea>
                         </div>
 
                         <button type="submit" className="flex gap-2 bg-purple-800 text-white font-bold p-3 w-full justify-center rounded-lg cursor-pointer hover:bg-purple-900 lg:text-base text-2xl my-2">Send Message <Send className="lg:mt-0 mt-2" /></button>

@@ -9,6 +9,7 @@ import Policy from "./pages/privacypolicy";
 import Terms from "./pages/termsofservice";
 import About from "./pages/about"
 import ScrollToTop from "./ScrollToTop"
+import ThankYou from "./pages/thank-you"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/policy" element={<Policy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/about" element={<About />} />
+            <Route path="/thank-you" element={<ThankYou />} />
 
           </Routes>
       </main>
