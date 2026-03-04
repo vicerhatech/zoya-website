@@ -36,7 +36,7 @@ const Navbar = () => {
           <a href="/#theProblem"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Problem</li></a>
           <a href="/#theSolution"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">Solution</li></a>
           <a href="/#howZoyaWorks"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">How It Works</li></a>
-          {/* <a href="/about"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">About</li></a> */}
+          <a href="/about"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">About</li></a>
         </ul>
 
         {/* Desktop Actions */}
@@ -46,7 +46,7 @@ const Navbar = () => {
 
           <Link to="/contact" className="rounded-lg border border-purple-800 px-4 py-2 text-base font-medium text-purple-900 dark:text-white hover:bg-purple-900 hover:text-white transition cursor-pointer dark:border-white dark:hover:bg-black">Contact Us</Link>
 
-          <a href="#get-started" className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">Get Started  ➔</a>
+          <Link to="/#get-started" className="rounded-lg border bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition cursor-pointer dark:hover:bg-black dark:border-white">Get Started  ➔</Link>
 
 
 
@@ -77,11 +77,11 @@ const Navbar = () => {
           >
 
             <ul className="flex flex-col gap-4 text-lg font-bold text-purple-800 dark:text-gray-200">
-              <a href="/"><li className="hover:text-purple-900 transition cursor-pointer">Home</li></a>
-              <a href="/#theProblem"><li className="hover:text-purple-900 transition cursor-pointer">Problem</li></a>
-              <a href="/#theSolution"><li className="hover:text-purple-900 transition cursor-pointer">Solution</li></a>
-              <a href="/#howZoyaWorks"><li className="hover:text-purple-900 transition cursor-pointer">How It Works</li></a>
-              {/* <a href="/about"><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">About</li></a> */}
+              <a href="/" onClick={() => setMenuOpen(false)}><li className="hover:text-purple-900 transition cursor-pointer">Home</li></a>
+              <a href="/#theProblem" onClick={() => setMenuOpen(false)}><li className="hover:text-purple-900 transition cursor-pointer">Problem</li></a>
+              <a href="/#theSolution" onClick={() => setMenuOpen(false)}><li className="hover:text-purple-900 transition cursor-pointer">Solution</li></a>
+              <a href="/#howZoyaWorks" onClick={() => setMenuOpen(false)}><li className="hover:text-purple-900 transition cursor-pointer">How It Works</li></a>
+              <a href="/about" onClick={() => setMenuOpen(false)}><li className="hover:text-purple-900 dark:hover:text-black transition cursor-pointer">About</li></a>
             </ul>
 
             {/* <div className="py-6">
@@ -90,13 +90,13 @@ const Navbar = () => {
 
             <div className="flex justify-between pt-5">
 
-              <Link to="/contact" className="rounded-lg border border-purple-800 px-4 py-2 text-base font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition">
+              <Link to="/contact" onClick={() => setMenuOpen(false)} className="rounded-lg border border-purple-800 px-4 py-2 text-base font-medium text-purple-900 dark:text-purple-300 hover:bg-purple-900 hover:text-white dark:hover:bg-white/10 transition">
                 Contact Us
               </Link>
 
-              <a href="#get-started" className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition">
+              <Link to="/#get-started" onClick={() => setMenuOpen(false)} className="rounded-lg bg-purple-800 px-4 py-3 text-sm font-medium text-white hover:bg-purple-900 transition">
                 Get Started  ➔
-              </a>
+              </Link>
             </div>
 
 

@@ -51,7 +51,7 @@ const Home = () => {
                             <img src={GooglePlay} alt="Google play store" className="transform transition-transform duration-300 ease-out hover:scale-112 scale-107" />
                         </a>
 
-                        <a href="" className="disable">
+                        <a href="https://apps.apple.com/app/id6759052187" className="disable">
                             <img src={AppleStore} alt="Apple Store" className="transform transition-transform duration-300 ease-out hover:scale-105" />
                         </a>
                     </div>
@@ -124,20 +124,20 @@ const Home = () => {
                     <div className="flex flex-col gap-3 lg:pt-0 sm:pt-5 pt-5">
                         <p className="flex lg:text-lg sm:text-xl">
                             <span className="hover:scale-110 pr-3 pt-1"><div className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 rounded-full bg-purple-800 flex items-center justify-center">
-                                <Check className="lg:w-4 lg:h-4 sm:w-6 sm:h-6 text-white" strokeWidth={3} />
+                                <Check className="lg:w-4 lg:h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                             </div></span>Estimate total project cost upfront with detailed breakdowns</p>
 
                         <p className="flex lg:text-lg sm:text-xl">
                             <span className="hover:scale-110 pr-3 pt-1"><div className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 rounded-full bg-purple-800 flex items-center justify-center">
-                                <Check className="lg:w-4 lg:h-4 sm:w-6 sm:h-6 text-white" strokeWidth={3} />
+                                <Check className="lg:w-4 lg:h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                             </div></span>Understand what you can realistically afford</p>
                         <p className="flex lg:text-lg sm:text-xl">
                             <span className="hover:scale-110 pr-3 pt-1"><div className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 rounded-full bg-purple-800 flex items-center justify-center">
-                                <Check className="lg:w-4 lg:h-4 sm:w-6 sm:h-6 text-white" strokeWidth={3} />
+                                <Check className="lg:w-4 lg:h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                             </div></span>Decide when to start and when to save more</p>
                         <p className="flex lg:text-lg sm:text-xl">
                             <span className="hover:scale-110 pr-3 pt-1"><div className="lg:w-5 lg:h-5 sm:w-7 sm:h-7 rounded-full bg-purple-800 flex items-center justify-center">
-                                <Check className="lg:w-4 lg:h-4 sm:w-6 sm:h-6 text-white" strokeWidth={3} />
+                                <Check className="lg:w-4 lg:h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                             </div></span>Avoid abandoned projects caused by poor planning</p>
                     </div>
 
@@ -503,7 +503,7 @@ const Home = () => {
                                 <img src={GooglePlay} alt="Google play store" className="transform transition-transform duration-300 ease-out hover:scale-112 scale-107" />
                             </a>
 
-                            <a href="" className="disable">
+                            <a href="https://apps.apple.com/app/id6759052187" className="disable">
                                 <img src={AppleStore} alt="Apple Store" className="transform transition-transform duration-300 ease-out hover:scale-105" />
                             </a>
                         </div>
