@@ -13,7 +13,7 @@ import Oyindamola from "../assets/images/oyindamola.png";
 import Victor from "../assets/images/victor.png";
 import Team from "../assets/images/team.jpeg";
 // import ZoyaVideo from "../assets/videos/video-1.MOV"
-import ZoyaVideo2 from "../assets/videos/video-2.MOV";
+import ZoyaVideo2 from "../assets/videos/video-2.mp4";
 
 function About() {
     return (
