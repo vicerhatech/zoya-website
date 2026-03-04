@@ -161,6 +161,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                                 <label htmlFor="email" className="lg:text-base text-2xl">Email Address <span><b className="text-red-600">*</b></span></label>
                                 <input type="email" name="email" id="email" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white " placeholder="you@exmaple.com" required />
                             </div>
+                            
 
                             <div>
                                 <label htmlFor="phone-number" className="lg:text-base text-2xl">Phone Number <span><b className="text-red-600">*</b></span></label>
