@@ -10,6 +10,7 @@ import Terms from "./pages/termsofservice";
 import About from "./pages/about"
 import ScrollToTop from "./ScrollToTop"
 import ThankYou from "./pages/thank-you"
+import DeleteAccount from "./pages/DeleteAccount"
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/about" element={<About />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/delete-account" element={<DeleteAccount />} />
 
           </Routes>
       </main>

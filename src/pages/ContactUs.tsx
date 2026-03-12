@@ -150,29 +150,29 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
                 <div className="shadow-2xl p-7 w-full rounded-4xl animate-flip-x timeline-view animate-range-entry dark:border dark:border-white">
                     <h2 className="font-bold lg:text-3xl sm:text-4xl text-3xl">Send Us a Message</h2>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="dark:text-white">
                         <div className="pt-4">
                             <label htmlFor="fullname" className="lg:text-base text-2xl">Full Name <span><b className="text-red-600">*</b></span></label>
-                            <input type="text" name="fullname" id="fullname" className=" w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder:font-semibold lg:text-base text-2xl placeholder:dark:text-white " placeholder="Enter your full name" required />
+                            <input type="text" name="fullname" id="fullname" className="dark:text-white w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder:font-semibold lg:text-base text-2xl placeholder:dark:text-white " placeholder="Enter your full name" required />
                         </div>
 
                         <div className="flex gap-6 pt-4 flex-col sm:flex-row">
                             <div>
                                 <label htmlFor="email" className="lg:text-base text-2xl">Email Address <span><b className="text-red-600">*</b></span></label>
-                                <input type="email" name="email" id="email" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white " placeholder="you@exmaple.com" required />
+                                <input type="email" name="email" id="email" className="dark:text-white w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white " placeholder="you@exmaple.com" required />
                             </div>
-                            
+
 
                             <div>
                                 <label htmlFor="phone-number" className="lg:text-base text-2xl">Phone Number <span><b className="text-red-600">*</b></span></label>
-                                <input type="tel" name="phone_number" id="phone-number" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="+234 800 000 0000" required />
+                                <input type="tel" name="phone_number" id="phone-number" className="dark:text-white w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="+234 800 000 0000" required />
                             </div>
                         </div>
 
                         <div className="flex gap-6 pt-4 flex-col sm:flex-row">
                             <div>
                                 <label htmlFor="project_type" className="lg:text-base text-2xl">Project Type <span><b className="text-red-600">*</b></span></label>
-                                <select name="project-type" className="w-full h-12 border-2 border-gray-500 outline-purple-800 focus:border-purple-800 text-black rounded-lg px-2 my-2 lg:text-base text-2xl dark:text-white " required>
+                                <select name="project-type" className="w-full h-12 border-2 border-gray-50 outline-purple-800 focus:border-purple-800 text-black rounded-lg px-2 my-2 lg:text-base text-2xl dark:text-white " required>
                                     <option value="" disabled selected className="text-black dark:text-black">Select project type</option>
                                     <option value="Residential-Building" className=" dark:text-black">Residential Building</option>
                                     <option value="Commercial-Building" className=" dark:text-black">Commercial Building</option>
@@ -184,7 +184,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
                             <div>
                                 <label htmlFor="roles" className="lg:text-base text-2xl">I am a... <span><b className="text-red-600">*</b></span></label>
-                                <select name="availability" className="w-full border-2 border-gray-500 rounded-lg px-2 h-12 my-2 text-black outline-purple-800 focus:border-purple-800 lg:text-base text-2xl dark:text-white " required>
+                                <select name="availability" className="w-full border-2 border-gray-500 rounded-lg px-2 h-12 my-2  text-black outline-purple-800 focus:border-purple-800 lg:text-base text-2xl dark:text-white " required>
                                     <option value="" disabled selected className=" dark:text-black">Choose role</option>
                                     <option value="Buyer" className=" dark:text-black">Buyer</option>
                                     <option value="Supplier" className=" dark:text-black">Supplier</option>
@@ -196,7 +196,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                         </div>
                         <div className="pt-4">
                             <label htmlFor="Subject" className="lg:text-base text-2xl">Subject <span><b className="text-red-600">*</b></span></label>
-                            <input type="text" name="subject" id="subject" className="w-full h-12 border-2 border-gray-500 outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="What is this about?" required />
+                            <input type="text" name="subject" id="subject" className="w-full h-12 border-2 border-gray-500 dark:text-white outline-purple-800 text-black rounded-lg p-5 my-2 placeholder: font-semibold lg:text-base text-2xl placeholder:dark:text-white" placeholder="What is this about?" required />
                         </div>
                         
 
@@ -208,7 +208,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                                 name="message"
                                 id="message"
                                 rows={5}
-                                className="mt-2 w-full border-2 border-gray-500 outline-purple-800 rounded-lg p-5 text-2xl placeholder:font-semibold placeholder:dark:text-white
+                                className="mt-2 dark:text-white w-full border-2 border-gray-500 outline-purple-800 rounded-lg p-5 text-2xl placeholder:font-semibold placeholder:dark:text-white
                sm:text-xl md:text-xl lg:text-lg
                focus:ring-2 focus:ring-purple-500 focus:border-purple-500
                transition-all duration-300"
