@@ -21,7 +21,7 @@ const DeleteAccount = () => {
           </p>
 
           <a
-            href="mailto:support@yourdomain.com"
+            href="mailto:support@zoyasupply.com "
             className="text-blue-600 font-medium underline"
           >
             support@zoyasupply.com 
