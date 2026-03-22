@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Check } from "lucide-react";
 import { Target } from "lucide-react";
@@ -18,6 +19,11 @@ import ZoyaVideo2 from "../assets/videos/video-2.mp4";
 function About() {
     return (
         <>
+
+            <Helmet>
+                <link rel="canonical" href="https://zoyasupply.com/about" />
+            </Helmet>
+
             <section className="bg-purple-100 sm:w-full h-fit shadow-xl pt-18 ">
                 <div className="relative w-full sm:h-145 h-120">
                     <img
@@ -118,7 +124,7 @@ function About() {
                             <h2 className="text-2xl font-bold pb-2">Our Mission</h2>
                             <p className="sm:text-base">
                                 To democratize construction planning across Nigeria by providing
-                                 accessible, transparent, and reliable tools that empower every
+                                accessible, transparent, and reliable tools that empower every
                                 Nigerian to build their dream home without fear of financial
                                 uncertainty.
                             </p>

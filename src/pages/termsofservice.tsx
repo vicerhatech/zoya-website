@@ -1,6 +1,14 @@
+import { Helmet } from "react-helmet";
+
+
 const Terms = () => {
     return (
         <>
+
+            <Helmet>
+                <link rel="canonical" href="https://zoyasupply.com/terms" />
+            </Helmet>
+
             <div className="pt-20 sm:pt-25 pb-15 sm:px-30 px-5 dark:bg-black dark:text-white">
                 <div className="lg:mx-40 sm:mx-30 mx-5">
                     <h2 className="font-bold lg:w-full w-80 sm:w-90 text-center text-xl sm:text-2xl">Zoya Procurement Ventures - Terms of Service</h2>

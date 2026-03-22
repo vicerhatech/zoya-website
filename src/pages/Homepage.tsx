@@ -1,4 +1,5 @@
 // import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { CheckSquare } from "lucide-react";
 import { Check } from "lucide-react";
 import Testimonials from "../components/other/testimonial"
@@ -26,6 +27,10 @@ import AppleStore from "../assets/images/apple-store.png";
 const Home = () => {
     return (
         <>
+
+            <Helmet>
+                <link rel="canonical" href="https://zoyasupply.com/" />
+            </Helmet>
 
             <section className=" flex flex-col sm:flex-col lg:flex-row lg:justify-normal justify-between lg:pt-32 pt-18 px-6 lg:px-20 dark:bg-black dark:text-white">
                 <div className="pt-10">
